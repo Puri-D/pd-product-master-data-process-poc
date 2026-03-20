@@ -21,9 +21,9 @@ This POC demonstrates that AI can automate the most labor-intensive parts of pro
 
 The organization's MDM system existed but operated at roughly 20% of its potential. It stored only rudimentary data — product code, product name, and basic attributes — while 80% of product master data was maintained directly in downstream departmental systems, each with its own formats, conventions, and workflows.
 
-![image.png](attachment:fe95d946-d1a5-4da3-b3cf-a8f79257daf4:image.png)
+![image.png](images/sys.webp)
 
-![image.png](attachment:8148d67e-7c9d-4cd9-af42-c0640f096b69:image.png)
+![image.png](images/op.webp)
 
 ## The Consequences
 
@@ -44,7 +44,7 @@ Meanwhile, the organization's investment in downstream data infrastructure — d
 
 ## **Solution: Master Data Centralization**
 
-![image.png](attachment:27691006-316b-4d08-8a88-d94b3b3fb50a:image.png)
+![image.png](images/sol.webp)
 
 - **Data Centralization** — migrate all downstream product master data to a single platform (MDM). Standardize fields, block create/modify in downstream systems, consume from MDM only.
 - **Process Standardization** — design end-to-end workflow in MDM with clear roles, approval routes, optimized data entry sequence, and data validation at source.
@@ -99,7 +99,7 @@ If feasible, AI transforms the governed MDM workflow from a burden into the **pa
 
 ## Solution Architecture
 
-![image.png](attachment:47d16e65-0553-43f9-ace1-d739f7d0141c:image.png)
+![image.png](images/flow.webp)
 
 **Design principle: Deterministic + Rules First, LLM Second**
 
