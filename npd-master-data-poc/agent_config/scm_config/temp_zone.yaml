@@ -1,0 +1,23 @@
+ultra_cold:
+  temp_range: "-23°C to -30°C"
+  zone_ids: ["UC-01", "UC-02"]
+  capacity_pallets: 200
+  cost_per_pallet_day: 2.50
+  
+strict_frozen:
+  temp_range: "-18°C ± 1°C"
+  zone_ids: ["SF-01", "SF-02", "SF-03"]
+  capacity_pallets: 500
+  cost_per_pallet_day: 1.50
+  
+standard_frozen:
+  temp_range: "-18°C ± 2°C"
+  zone_ids: ["STD-01", "STD-02", "STD-03"]
+  capacity_pallets: 1000
+  cost_per_pallet_day: 0.80
+  
+flexible_frozen:
+  temp_range: "-12°C ± 3°C"
+  zone_ids: ["FF-01", "FF-02"]
+  capacity_pallets: 300
+  cost_per_pallet_day: 0.50

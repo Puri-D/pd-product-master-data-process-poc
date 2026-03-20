@@ -1,0 +1,24 @@
+transport_modes:
+  refrigerated_truck:
+    temp_control: "Active cooling -25°C to +5°C"
+    max_distance_km: 1000
+    avg_speed_kmh: 60
+    capacity_kg: 15000
+    cost_per_km: 8.00
+    transit_time_limit: "48h max"
+    
+  insulated_truck:
+    temp_control: "Passive insulation"
+    max_distance_km: 500
+    avg_speed_kmh: 60
+    capacity_kg: 20000
+    cost_per_km: 5.00
+    transit_time_limit: "24h recommended"
+    
+  air_freight_cold:
+    temp_control: "Active cooling -20°C to +5°C"
+    max_distance_km: 5000
+    avg_speed_kmh: 500
+    capacity_kg: 5000
+    cost_per_km: 25.00
+    transit_time_limit: "12h max"

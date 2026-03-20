@@ -1,0 +1,10 @@
+shelf_life_to_aging:
+  # Direct copy, no transformation needed
+  
+um_sap_to_local:
+  PAC: "001-pack"
+  KG: "002-kilogram"
+  BOX: "003-box"
+  EA: "004-each"
+  BAG: "005-bag"
+  CS: "006-case"

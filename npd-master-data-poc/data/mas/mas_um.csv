@@ -1,0 +1,12 @@
+﻿mdm_unit_code,mdm_um_name,mdm_unit_text,decimal_place,unit_type
+CS,Case,"กล่อง,box,carton,case,cs",0,Quantity
+KG,Kilogram,"กก,กิโลกรัม,kg,kgs,kilograms,kilogram",0,Weight
+PAC,Pack,"แพ็ค,pack,packs,pac",0,Quantity
+EA,Each,"ตัว,each,whole,ea",0,Quantity
+BAG,Bag,"ถุง,bag,bags",0,Quantity
+STK,Stick,"ไม้,stick,stk",0,Quantity
+TRA,Tray,"ถาด,ถาดthermoform,thermoform,tra,tray",0,Quantity
+SET,Set,"ชุด,set,sets",0,Quantity
+PC,Piece,"ชิ้น,pieces,piece,pc,pcs",0,Quantity
+EGG,egg,"ฟอง,eggs,egg",0,Quantity
+SAC,sachet,"ซอง,sachets,sachet,sac",0,Quantity
