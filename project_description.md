@@ -213,9 +213,9 @@ Example format: {json.dumps(field_template, ensure_ascii=False)}"""
 
 Each view subgraph uses the same three-tier processing model, but the specific rules and context are tailored per department:
 
-- **Tier A — Deterministic Mapping (majority of fields):** Direct value lookup from the department's YAML config section. Same input always produces same output. Zero AI.
-- **Tier B — Rule-Based Transformation (some fields):** Conditional logic, unit conversions, format transformations defined in config. Deterministic but with business rules.
-- **Tier C — LLM-Assisted Contextual Generation (few fields only):** For fields where the output requires interpreting data through the department's specific context. The LLM is loaded with that department's context from the YAML config to generate appropriate values. These fields are flagged for human review.
+- **Tier A — Deterministic Mapping:** Direct value lookup from the department's YAML config section. Same input always produces same output. Zero AI.
+- **Tier B — Rule-Based Transformation:** Conditional logic, unit conversions, format transformations defined in config. Deterministic but with business rules.
+- **Tier C — LLM-Assisted Contextual Generation:** For fields where the output requires interpreting data through the department's specific context. The LLM is loaded with that department's context from the YAML config to generate appropriate values. These fields are flagged for human review.
 
 **Design principle**
 
