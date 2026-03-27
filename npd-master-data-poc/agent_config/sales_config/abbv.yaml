@@ -1,7 +1,7 @@
 pos_name_limit:
   char_limit_th: 20
   char_limit_en: 20
-  encoding: 'uyt-8'
+  encoding: 'utf-8'
 
 abbv_en:
   Chicken: "Chkn"
