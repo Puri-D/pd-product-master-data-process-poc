@@ -1,3 +1,5 @@
+[Link to slide presentation](MDM_case_present.pdf)
+
 A proof-of-concept demonstrating how local LLMs and deterministic logic can automate product master data creation within a governed MDM workflow — reducing manual data entry while maintaining human oversight and data quality at the point of data creation.
 
  > **Note:** This is a POC validating technical feasibility, not a production system. The governance design and standardized data architecture it builds upon were developed during a prior role as Business Analyst on an MDMS centralization initiative. Every data governance initiative must be tailored to the organization's structure, processes, and specific requirements — there is no one-size-fits-all solution.
