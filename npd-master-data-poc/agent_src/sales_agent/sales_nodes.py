@@ -148,26 +148,11 @@ def node_fg_weight_unit(state:SalesState): #Weighted FG products
 
         #Equivalent Unit
         result.update(dict.fromkeys(['pack_equi_um', 'sales_equi_um', 'pur_equi_um',  'picking_equi_um'],unit_conversion("KG")))
+        result['picking_equi_um'] = unit_conversion(mdm.get('inner_container_um')) if unit_conversion(mdm.get('inner_container_um')) else unit_conversion(mdm.get('item_um'))
 
     return {'sales_unit_measurement': result}
 
 
-
-if __name__ == '__main__':
-    data = {
-         'product_name': 'Grilled Chicken Breast Teriyaki Flavor 200g',
-         'material_desc_eng': 'Grilled Chicken Breast Teriyaki Flavor 200g',
-         'material_desc_local': 'อกไก่ย่างรสเทอริยากิ 200 กรัม',
-         'brand':'GoldenFresh',
-         'pg4':'PAC',
-         'pg5': 'FROZEN',
-         'pg6': 'CHICKEN FURTHER',
-     }
- 
-    state = {'mdm_data': data}
-    result = llm_pos_name(state)
-    print(result)
- 
 
 
 
