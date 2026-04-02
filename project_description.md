@@ -515,7 +515,7 @@ Each department's user reviews their pre-filled view before it interfaces to the
 
 | View | Target System |
 | --- | --- |
-| Production | Manufacturing ERPs |
+| Production | Manufacturing MES/ERPs |
 | Sales | Sales/POS Systems |
 | SCM | Supply/Demand Planning & Forecasting |
 
