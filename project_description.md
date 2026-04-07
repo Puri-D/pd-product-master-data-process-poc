@@ -1,4 +1,8 @@
-[Link to slide presentation](MDM_case_present.pdf)
+Work in Progress: This repository contains my first POC iteration (v1), which is not yet presentation-ready—the code structure is difficult to follow and lacks a user interface for demonstration.
+A completely rebuilt version (v2) with a proper Streamlit UI and modular LangGraph architecture is currently under development and will replace this soon.
+Please check back later for the updated version!
+
+In the meantime: You can review the presentation slides for case studies, analysis, and the methodology behind this work. [Link to slide presentation](MDM_case_present.pdf)
 
 A proof-of-concept demonstrating how local LLMs and deterministic logic can automate product master data creation within a governed MDM workflow — reducing manual data entry while maintaining human oversight and data quality at the point of data creation.
 
