@@ -1,0 +1,27 @@
+CASE:
+  purchase_order_unit: "CARTON"
+  purchase_order_code: "SALES-CTN-001"
+
+BAG:
+  purchase_order_unit: "SACK"
+  purchase_order_code: "SALES-SACK-001"
+
+TRAY:
+  purchase_order_unit: "TRAY"
+  purchase_order_code: "SALES-TRY-001"
+
+PACK:
+  purchase_order_unit: "PACK"
+  purchase_order_code: "SALES-PACK-001"
+
+SACHET:
+  purchase_order_unit: "SACHET"
+  purchase_order_code: "SALES-SAC-001"
+
+TANK:
+  purchase_order_unit: "DRUM"
+  purchase_order_code: "SALES-DRUM-001"
+
+KILOGRAM:
+  purchase_order_unit: "KILOGRAM"
+  purchase_order_code: "SALES-KG-001"

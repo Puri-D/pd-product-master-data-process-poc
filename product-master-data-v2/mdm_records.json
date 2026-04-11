@@ -1,0 +1,1142 @@
+[
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-153640",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_153554",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:35:54.655069",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:36:40.663726",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-154026",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_154022",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:40:22.395978",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:40:26.332370",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-154034",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_154022",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:40:22.395978",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:40:34.248120",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-154041",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_154022",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:40:22.395978",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:40:41.942994",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-154047",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_154022",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:40:22.395978",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:40:47.533239",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-154056",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_154022",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:40:22.395978",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:40:56.694237",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-154059",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_154022",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:40:22.395978",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:40:59.426542",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-155332",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_155253",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:52:53.128657",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:53:32.960627",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-155338",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_155253",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T15:52:53.128657",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T15:53:38.585870",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-160007",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_160001",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T16:00:01.131354",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T16:00:07.526512",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-160010",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_160001",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T16:00:01.131354",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T16:00:10.798641",
+        "correction": false
+      }
+    }
+  },
+  {
+    "record_id": "UNIT_OF_MEASUREMENT-20260410-160016",
+    "topic": "unit_of_measurement",
+    "extracted_data": {
+      "item_qty": null,
+      "item_unit": null,
+      "item_weight_min": 2.0,
+      "item_weight_max": 2.0,
+      "inner_container_um": "BAG",
+      "item_per_inner_qty": 1.0,
+      "inner_weight_min": 2.0,
+      "inner_weight_max": 2.0,
+      "inner_per_master_qty": 10.0,
+      "master_container_um": "CS",
+      "master_weight_max": 20.0,
+      "master_weight_min": 20.0,
+      "has_master": true,
+      "is_weighted": false,
+      "base_um": "KG"
+    },
+    "metadata": {
+      "record_identity": {
+        "record_id": "UOM_20260410_160001",
+        "topic": "Unit of Measurement",
+        "created_time": "2026-04-10T16:00:01.131354",
+        "record_version": 1
+      },
+      "source": {
+        "source_system": "rd_spec_sheet",
+        "source_type": "excel_form",
+        "source_field": "packing_detail",
+        "source_extraction_method": "vlm_qwen3-vl:8b"
+      },
+      "extraction": {
+        "tier3_fields": [
+          "item_qty",
+          "item_unit",
+          "item_weight_min",
+          "item_weight_max",
+          "inner_container_um",
+          "item_per_inner_qty",
+          "inner_weight_min",
+          "inner_weight_max",
+          "inner_per_master_qty",
+          "master_container_um"
+        ],
+        "tier2_fields": [
+          "master_weight_min",
+          "master_weight_max",
+          "has_master",
+          "is_weighted",
+          "base_um"
+        ],
+        "tier1_fields": [],
+        "extraction_method": "tier3_llm_rag",
+        "rag_enabled": true,
+        "llm_model": "llama3.1:8b",
+        "total_fields_extracted": 10,
+        "total_fields": 15
+      },
+      "lineage": {
+        "field_dependencies": {
+          "master_weight_max": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_per_master_qty"
+            ]
+          },
+          "master_weight_min": {
+            "depends_on": [
+              "inner_weight_min",
+              "inner_per_master_qty"
+            ]
+          },
+          "has_master": {
+            "depends_on": [
+              "inner_per_master_qty"
+            ]
+          },
+          "is_weighted": {
+            "depends_on": [
+              "inner_weight_max",
+              "inner_weight_min"
+            ]
+          }
+        }
+      },
+      "human_review": {
+        "review_status": "approved",
+        "review_by": "user",
+        "review_at": "2026-04-10T16:00:16.056589",
+        "correction": false
+      }
+    }
+  }
+]

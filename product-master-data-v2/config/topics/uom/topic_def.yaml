@@ -1,0 +1,292 @@
+# config/topics/uom/topic_definition.yaml
+
+# ============================================
+# TOPIC CONFIGURATION
+# Everything about the UOM topic as a whole
+# ============================================
+topic:
+  # ----------------------------------------
+  # Topic Identity
+  # ----------------------------------------
+  id: unit_of_measurement
+  name: "Unit of Measurement" ##Later on it will need to be use as Reference router
+  file: "uom" # NEED TO BE same as TOPIC's FOLDER NAME, IT WILL BE REFERRED ON MANY FUNCTIONS ***** 
+  description: "Extracts packaging hierarchy, weights, quantities, and container types from packing text"
+  type: 'canonical'
+  version: "1.0"
+  owner: "mdm_team"
+  
+
+  # ----------------------------------------
+  # Tier 3 LLM Configuration
+  # Settings for LLM+RAG extraction
+  # ----------------------------------------
+  tier3_llm:
+    source_file: "rd_spec_sheet" 
+    source_type: "excel_form"
+    source_text_field: "packing_detail" # What LLM will use as an INPUT
+    source_extraction_method: "vlm_qwen3-vl:8b"
+    model: "llama3.1:8b"
+    base_url: "http://localhost:11434"
+    timeout: 60
+    temperature: 0.0
+    
+    rag:
+      embedding_model: "all-MiniLM-L6-v2"
+      top_k_examples: 3
+      min_similarity: 0.6
+      use_complexity_filter: true
+      complexity_tolerance: 1  # Allow ±1 slash count difference
+
+    zero_shot:
+      additional_instruction: "Hello World"
+
+  # ----------------------------------------
+  # Prompt Configuration (Topic-Specific)
+  # LLM prompt instructions tailored for UOM
+  # ----------------------------------------
+  prompt_config:
+    system_role: |
+      You are a packaging data extraction expert specializing in Thai and English product specifications.
+      You understand packaging hierarchies: item (smallest unit) → inner (intermediate container) → master (shipping container).
+    
+    task_description: |
+      Extract structured packaging information from packing text.
+      The text may be in Thai, English, or mixed languages.
+      Packaging follows a hierarchy: individual items are packed into inner containers, which are packed into master containers.
+    
+    critical_instructions:
+      - "Leave item fields EMPTY (null) if the product is sold in bulk with no individual item breakdown"
+      - "Leave item fields EMPTY if packing text shows only container→container (e.g., '2kg/bag x 10 bags/carton' has no item breakdown)"
+      - "All weights MUST be in kilograms (KG). Convert grams by dividing by 1000 (e.g., 400g → 0.4 KG)"
+      - "For Thai text 'ถุงละ X ชิ้น', this means 'X items per bag' (reversed word order from English)"
+      - "For Thai text 'บรรจุ X ต่อ Y', this means 'packed X per Y'"
+      - "For weight ranges like '75-85g/pcs', extract item_weight_min=0.075 and item_weight_max=0.085 separately"
+      - "For weight ranges, if only one value given (e.g., '2kg/bag'), use same value for both min and max"
+      - "For parenthetical counts like '10KG(6HEAD)/BAG', calculate item weight by division: 10kg ÷ 6 = 1.67kg per head"
+      - "For additions like '80G(+15G SAUCE)/BAG', extract only the base weight (80g), ignore additions"
+      - "item_unit can be: PCS, EA, STK, PC, or animal part names (HEAD, WING, LEG, BREAST)"
+      - "item_unit CANNOT be container types like PAC, BAG, BOX, SAC - these are inner/master containers"
+      - "If text shows 'X/bag' with no item breakdown, leave item fields null - the bag IS the selling unit"
+      - "has_master should be TRUE only if text mentions master containers (carton, case, box, ลัง, กล่อง)"
+    
+    output_format_instructions: |
+      OUTPUT FORMAT:
+      Return ONLY a valid JSON object with the requested fields.
+      Use null (not empty strings) for missing values.
+      Do not include any explanation, preamble, or markdown code fences.
+      Ensure all field names exactly match the requested fields.
+    
+    examples_header: |
+      EXAMPLES OF SIMILAR PACKING TEXT:
+      Study these examples to understand the extraction pattern.
+    
+    extraction_header: |
+      NOW EXTRACT FROM THIS INPUT:
+
+
+  # ----------------------------------------
+  # Business Rules (Topic-Level Validation) ** Not in use
+  # Rules that apply across all fields
+  # ----------------------------------------
+  business_rules:
+    - name: "weight_range_consistency"
+      description: "Maximum weight must be >= minimum weight"
+      validation: "item_weight_max >= item_weight_min AND inner_weight_max >= inner_weight_min"
+      severity: "error"
+      
+    - name: "master_requires_inner_qty"
+      description: "If has_master=true, must specify inner_per_master_qty"
+      validation: "IF has_master = true THEN inner_per_master_qty IS NOT NULL"
+      severity: "error"
+      
+    - name: "item_unit_restriction"
+      description: "item_unit cannot be container types"
+      validation: "item_unit NOT IN ['PAC', 'BAG', 'BOX', 'SAC', 'CTN', 'CAR', 'CS']"
+      severity: "error"
+      
+    - name: "calculated_master_weight"
+      description: "Master weight should equal inner weight x quantity"
+      validation: "master_weight_max = inner_weight_max * inner_per_master_qty"
+      severity: "warning"  # Warning only (not hard error)
+  
+  # ----------------------------------------
+  # Reference Data (Topic-Specific Files)
+  # Paths to supporting data files
+  # ----------------------------------------
+  reference_data:
+    rag_examples:
+      path: "config/topics/uom/reference_data/packing_detail_examples.csv"
+      description: "Few-shot examples for LLM"
+      schema:
+        type: csv
+        embedding_column: "input_text"
+        required_columns: ["input_text", "output_base_um"]
+        unique_columns: ["example_id"]
+    
+    unit_translations:
+      path: "config/topics/uom/resources/unit_translation.yaml"
+      description: "Thai/English unit text to code mappings"
+      schema:
+        type: yaml
+        required_fields: ["mdm_unit_code"]
+
+# ============================================
+# FIELD DEFINITIONS
+# Individual field specifications
+# (Sibling to topic, not nested under it)
+# ============================================
+fields:
+
+  # ========================================
+  # ITEM LEVEL (Optional - bulk products have no items)
+  # ========================================
+  
+  item_qty:
+    description: "Quantity of items (1 for single items, or count if specified)"
+    data_type: integer
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "item_qty"
+  
+  item_unit:
+    description: "Unit for individual item (PCS, EA, STK, PC)"
+    data_type: string
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "item_unit"
+    
+  
+  item_weight_min:
+    description: "Minimum weight of one item in KG"
+    data_type: decimal
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "item_weight_min"
+  
+  item_weight_max:
+    description: "Maximum weight of one item in KG (same as min if no range)"
+    data_type: decimal
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "item_weight_max"
+  
+  # ========================================
+  # INNER LEVEL (Optional)
+  # ========================================
+  
+  inner_container_um:
+    description: "Container for inner packing"
+    data_type: string
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "inner_container_um"
+
+  
+  item_per_inner_qty:
+    description: "Number of items per inner container"
+    data_type: integer
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "item_per_inner_qty"
+
+  
+  inner_weight_min:
+    description: "Minimum weight of inner container in KG"
+    data_type: decimal
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "inner_weight_min"
+  
+  
+  inner_weight_max:
+    description: "Maximum weight of inner container in KG"
+    data_type: decimal
+    required: false  
+    extraction:
+      primary_tier: 3
+      output_field: "inner_weight_max"
+  
+  # ========================================
+  # MASTER LEVEL (Optional)
+  # ========================================
+  
+  
+  inner_per_master_qty:
+    description: "Number of inner containers per master carton"
+    data_type: integer
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "inner_per_master_qty"
+
+  master_container_um:
+    description: "Container for master packing (CAR, CS, BOX, CTN, etc.)"
+    data_type: string
+    required: false
+    extraction:
+      primary_tier: 3
+      output_field: "master_container_um"
+
+  
+  master_weight_min:
+    description: "Minimum weight of master container in KG"
+    data_type: decimal
+    required: false  
+    extraction:
+      primary_tier: derived
+      output_field: "master_weight_min"
+      derived_config:
+        formula: "inner_weight_min * inner_per_master_qty"
+        depends_on: ["inner_weight_min", "inner_per_master_qty"]
+  
+  
+  # ========================================
+  # Derived Fields
+  # ========================================
+  
+  master_weight_max:
+    description: "Maximum weight of master container in KG"
+    data_type: decimal
+    required: false
+    extraction:
+      primary_tier: derived
+      output_field: "master_weight_max"
+      derived_config:
+        formula: "inner_weight_max * inner_per_master_qty"
+        depends_on: ["inner_weight_max", "inner_per_master_qty"]
+
+  has_master:
+    description: "Whether product has master-level packaging (carton/case/box)"
+    data_type: boolean
+    extraction:
+      primary_tier: derived
+      output_field: "has_master"
+      derived_config:
+        depends_on: ["inner_per_master_qty"]
+
+  is_weighted:
+    description: "Whether product weight is in range"
+    data_type: boolean
+    extraction:
+      primary_tier: derived
+      output_field: "is_weighted"
+      derived_config:
+        depends_on: ["inner_weight_max", "inner_weight_min"]
+
+  base_um:
+    description: "Base inventory unit (always KG for company standard)"
+    data_type: string
+    required: true
+    extraction:
+      primary_tier: derived
+      output_field: "base_um"
+      derived_config:
+        depends_on: []

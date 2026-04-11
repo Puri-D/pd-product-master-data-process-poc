@@ -1,0 +1,42 @@
+topic:
+  id: sales_view
+  name: "Sales View"
+  file: "sales"
+  type: "departmental_view"
+  version: "1.0"
+  owner: "sales_team"
+  
+  source_topic: "unit_of_measurement"
+  
+  tier2_rules:
+    source_field: "production_view_data"
+    rules_module: "helpers"
+  
+  reference_data:
+    sales_mapping:
+      path: "config/topics/uom/departmental_view/sales/resources/production_to_sales_mapping.yaml"
+      description: "Production units to Sales ordering units mapping"
+      schema:
+        type: "yaml"
+        required_fields: ["purchase_order_unit", "purchase_order_code"]
+
+fields:
+  purchase_order_unit:
+    description: "Unit Sales uses to order from Production (may differ from production terminology)"
+    data_type: string
+    required: true
+    extraction:
+      primary_tier_number: 2
+      primary_tier: derived
+      rule: "lookup_sales_unit"
+      depends_on: ["production_batch_unit"]
+  
+  purchase_order_code:
+    description: "Sales system UOM code for ordering"
+    data_type: string
+    required: true
+    extraction:
+      primary_tier_number: 2
+      primary_tier: derived
+      rule: "lookup_sales_code"
+      depends_on: ["production_batch_unit"]

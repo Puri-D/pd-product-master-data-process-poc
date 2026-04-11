@@ -1,0 +1,31 @@
+BAG:
+  production_unit: "BAG"
+  production_code: "PROD-BAG-001"
+
+CS:
+  production_unit: "CASE"
+  production_code: "PROD-CASE-002"
+
+PAC:
+  production_unit: "PACK"
+  production_code: "PROD-PACK-003"
+
+SAC:
+  production_unit: "SACHET"
+  production_code: "PROD-SACHET-004"
+
+TRA:
+  production_unit: "TRAY"
+  production_code: "PROD-TRAY-005"
+
+TNK:
+  production_unit: "TANK"
+  production_code: "PROD-TANK-006"
+
+KG:
+  production_unit: "KILOGRAM"
+  production_code: "PROD-KG-010"
+
+BOX:
+  production_unit: "BOX"
+  production_code: "PROD-BOX-010"

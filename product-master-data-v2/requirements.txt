@@ -1,0 +1,22 @@
+# Core Framework
+streamlit>=1.30.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+pyyaml>=6.0
+
+# LLM & AI
+ollama>=0.1.0
+langgraph>=0.0.26
+langchain>=0.1.0
+
+# RAG & Embeddings
+sentence-transformers>=2.2.0
+scikit-learn>=1.3.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# HTTP Requests
+requests>=2.31.0

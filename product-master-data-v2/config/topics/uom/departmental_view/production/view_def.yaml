@@ -1,0 +1,47 @@
+topic: 
+  id: 'production_view'
+  name: 'Production View'
+  file: 'production'
+  type: 'departmental_view'
+  version: '1.0'
+  owner: "production_team"
+
+  # Parent Topic "ID" Reference
+  source_topic: "unit_of_measurement"
+  tier2_rules:
+    source_field: "mdm_canonical_data"
+    rules_module: "helpers"
+
+  reference_data:
+    unit_mapping:
+      path: "config/topics/uom/departmental_view/production/resources/unit_mdm_to_production_mapping.yaml"
+      description: "MDM unit codes to Production unit codes mapping"
+      schema: 
+        type: "yaml"
+        required_fields: ["production_unit", "production_code"]
+  
+fields:
+  # ========================================
+  # Field 1: Production Batch Unit
+  # ========================================
+  production_batch_unit:
+    description: "Production batch unit for manufacturing (CASE, BAG, etc.)"
+    data_type: string
+    required: true
+    extraction:
+      primary_tier_number: 2
+      primary_tier: derived
+      depends_on: ["has_master", "master_container_um", "inner_container_um"]
+  
+  # ========================================
+  # Field 2: Production UOM Code
+  # ========================================
+  production_uom_code:
+    description: "Production ERP UOM code *For Different CS specs (size, shape, form)"
+    data_type: string
+    required: true
+    extraction:
+      primary_tier_number: 2
+      primary_tier: derived
+      depends_on: ["production_batch_unit"]
+    

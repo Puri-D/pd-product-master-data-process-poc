@@ -1,0 +1,95 @@
+﻿example_id,input_text,output_base_um,output_item_qty,output_item_unit,output_item_weight_min,output_item_weight_max,output_inner_container_um,output_item_per_inner_qty,output_inner_weight_min,output_inner_weight_max,output_has_master,output_inner_per_master_qty,output_master_container_um,master_weight_min,master_weight_max
+1,2 kgs/bag x 10 bags/carton,KG,,,,,BAG,1,2,2,TRUE,10,CAR,20,20
+2,1 kgs/bag x 12 bags/carton,KG,,,,,BAG,1,1,1,TRUE,12,CAR,12,12
+3,3 kgs/bag x 8 bags/carton,KG,,,,,BAG,1,3,3,TRUE,8,CAR,24,24
+4,1.5 kgs/bag x 10 bags/carton,KG,,,,,BAG,1,1.5,1.5,TRUE,10,CAR,15,15
+5,2 kg/bag x 6 bags/case,KG,,,,,BAG,1,2,2,TRUE,6,CS,12,12
+6,100 กรัมต่อซอง ซองละ 4 ไม้ บรรจุ 20 ซองต่อกล่อง,KG,1,STK,0.025,0.025,SAC,4,0.1,0.1,TRUE,20,BOX,2,2
+7,150 กรัมต่อซอง ซองละ 4 ไม้ บรรจุ 15 ซองต่อกล่อง,KG,1,STK,0.0375,0.0375,SAC,4,0.15,0.15,TRUE,15,BOX,2.25,2.25
+8,80 กรัมต่อซอง ซองละ 5 ไม้ บรรจุ 20 ซองต่อกล่อง,KG,1,STK,0.016,0.016,SAC,5,0.08,0.08,TRUE,20,BOX,1.6,1.6
+9,120 กรัมต่อซอง ซองละ 3 ไม้ บรรจุ 24 ซองต่อกล่อง,KG,1,STK,0.04,0.04,SAC,3,0.12,0.12,TRUE,24,BOX,2.88,2.88
+10,ซองละ 4 ไม้ 100 กรัมต่อซอง,KG,1,STK,0.025,0.025,SAC,4,0.1,0.1,FALSE,,,,
+11,ซองละ 5 ไม้ 120 กรัมต่อซอง,KG,1,STK,0.024,0.024,SAC,5,0.12,0.12,FALSE,,,,
+12,ซองละ 3 ไม้ 90 กรัมต่อซอง,KG,1,STK,0.03,0.03,SAC,3,0.09,0.09,FALSE,,,,
+13,ขนาด 75-85g/pcs บรรจุ 10 ชิ้น/ถุง(vaccum) 6 ถุงต่อกล่อง,KG,1,PC,0.075,0.085,BAG,10,0.75,0.85,TRUE,6,BOX,4.5,5.1
+14,ขนาด 80-90g/pcs บรรจุ 12 ชิ้น/ถุง(vaccum) 8 ถุงต่อกล่อง,KG,1,PC,0.08,0.09,BAG,12,0.96,1.08,TRUE,8,BOX,7.68,8.64
+15,ขนาด 60-70g/pcs บรรจุ 15 ชิ้น/ถุง 10 ถุงต่อกล่อง,KG,1,PC,0.06,0.07,BAG,15,0.9,1.05,TRUE,10,BOX,9,10.5
+16,ขนาด 100-120g/pcs บรรจุ 8 ชิ้น/ถุง 5 ถุงต่อกล่อง,KG,1,PC,0.1,0.12,BAG,8,0.8,0.96,TRUE,5,BOX,4,4.8
+17,ขนาด 150-170kg บรรจุถุงขนาดใหญ่,KG,1,EA,150,170,BAG,1,150,170,FALSE,,,,
+18,ขนาด 140-160kg บรรจุถุงขนาดใหญ่,KG,1,EA,140,160,BAG,1,140,160,FALSE,,,,
+19,ขนาด 180-200kg บรรจุถุงขนาดใหญ่,KG,1,EA,180,200,BAG,1,180,200,FALSE,,,,
+20,250 กรัม 12 ชิ้น/กล่อง,KG,1,PC,0.0208,0.0208,CS,12,0.25,0.25,FALSE,,,,
+21,200 กรัม 15 ชิ้น/กล่อง,KG,1,PC,0.0133,0.0133,CS,15,0.2,0.2,FALSE,,,,
+22,300 กรัม 10 ชิ้น/กล่อง,KG,1,PC,0.03,0.03,CS,10,0.3,0.3,FALSE,,,,
+23,150 กรัม 20 ชิ้น/กล่อง,KG,1,PC,0.0075,0.0075,CS,20,0.15,0.15,FALSE,,,,
+24,2KG/BAGx10BAGS/CASE,KG,,,,,BAG,1,2,2,TRUE,10,CS,20,20
+25,1KG/BAGx12BAGS/CASE,KG,,,,,BAG,1,1,1,TRUE,10,CS,10,10
+26,3KG/BAGx8BAGS/CASE,KG,,,,,BAG,1,3,3,TRUE,8,CS,24,24
+27,1.5KG/BAGx10BAGS/CASE,KG,,,,,BAG,1,1.5,1.5,TRUE,10,CS,15,15
+28,8.5KG(5HEAD)/BAG,KG,1,EA,1.7,1.7,BAG,5,8.5,8.5,FALSE,,,,
+29,10KG(6HEAD)/BAG,KG,1,EA,1.67,1.67,BAG,6,10,10,FALSE,,,,
+30,7KG(4HEAD)/BAG,KG,1,EA,1.75,1.75,BAG,4,7,7,FALSE,,,,
+31,9KG(5HEAD)/BAG,KG,1,EA,1.8,1.8,BAG,5,9,9,FALSE,,,,
+32,1.33KGX8BAGSX1OUTERBAG/CASE,KG,1,SAC,0.17,0.17,BAG,8,1.33,1.33,TRUE,10,CS,13.3,13.3
+33,1.5KGX10BAGSX1OUTERBAG/CASE,KG,1,SAC,0.15,0.15,BAG,10,1.5,1.5,TRUE,10,CS,15,15
+34,1.2KGX12BAGSX1OUTERBAG/CASE,KG,1,SAC,0.1,0.1,BAG,12,1.2,1.2,TRUE,10,CS,12,12
+35,700G(HEAD)X10BAGS/CASE,KG,1,EA,0.7,0.7,BAG,1,0.7,0.7,TRUE,10,BOX,7,7
+36,800G(HEAD)X12BAGS/CASE,KG,1,EA,0.8,0.8,BAG,1,0.8,0.8,TRUE,12,BOX,9.6,9.6
+37,600G(HEAD)X15BAGS/CASE,KG,1,EA,0.6,0.6,BAG,1,0.6,0.6,TRUE,15,BOX,9,9
+38,900G(HEAD)X8BAGS/CASE,KG,1,EA,0.9,0.9,BAG,1,0.9,0.9,TRUE,8,BOX,7.2,7.2
+39,1KG(HEAD)/BAG,KG,1,EA,1,1,BAG,1,1,1,FALSE,,,,
+40,1.2KG(HEAD)/BAG,KG,1,EA,1.2,1.2,BAG,1,1.2,1.2,FALSE,,,,
+41,0.8KG(HEAD)/BAG,KG,1,EA,0.8,0.8,BAG,1,0.8,0.8,FALSE,,,,
+42,1.5KG(HEAD)/BAG,KG,1,EA,1.5,1.5,BAG,1,1.5,1.5,FALSE,,,,
+43,1.12-1.52KG/EA 5 EA/BAG,KG,1,EA,1.12,1.52,BAG,5,5.6,7.6,FALSE,,,,
+44,1.2-1.5KG/EA 6 EA/BAG,KG,1,EA,1.2,1.5,BAG,6,7.2,9,FALSE,,,,
+45,0.9-1.1KG/EA 8 EA/BAG,KG,1,EA,0.9,1.1,BAG,8,7.2,8.8,FALSE,,,,
+46,1.3-1.6KG/EA 4 EA/BAG,KG,1,EA,1.3,1.6,BAG,4,5.2,6.4,FALSE,,,,
+47,0.5KG/BAG x 8 BAGS/BOX x 6 BOX/CAR,KG,1,BAG,0.5,0.5,BOX,8,4,4,TRUE,6,CAR,24,24
+48,1KG/BAG x 10 BAGS/BOX x 5 BOX/CAR,KG,1,BAG,1,1,BOX,10,10,10,TRUE,5,CAR,50,50
+49,0.75KG/BAG x 12 BAGS/BOX x 4 BOX/CAR,KG,1,BAG,0.75,0.75,BOX,12,9,9,TRUE,4,CAR,36,36
+50,1.5KG/BAG x 6 BAGS/BOX x 8 BOX/CAR,KG,1,BAG,1.5,1.5,BOX,6,9,9,TRUE,8,CAR,72,72
+51,2 kg/bag x 10 bag/carton,KG,,,,,BAG,1,2,2,TRUE,10,CAR,20,20
+52,3kg/bag x 8bag/carton,KG,,,3,3,BAG,1,3,3,TRUE,8,CAR,24,24
+53,1.5 kg / bag x 12 bags / carton,KG,,,1.5,1.5,BAG,1,1.5,1.5,TRUE,12,CAR,18,18
+54,1.8KG(HEAD)/BAG,KG,1,EA,1.8,1.8,BAG,1,1.8,1.8,FALSE,,,,
+55,2KG(HEAD)/BAG,KG,1,EA,2,2,BAG,1,2,2,FALSE,,,,
+56,0.8-1.2KG/EA 10 EA/BAG,KG,1,EA,0.8,1.2,BAG,10,8,12,FALSE,,,,
+57,1.5-1.8KG/EA 3 EA/BAG,KG,1,EA,1.5,1.8,BAG,3,4.5,5.4,FALSE,,,,
+58,0.3KG/BAG x 12 BAGS/BOX x 10 BOX/CAR,KG,1,BAG,0.3,0.3,BOX,12,3.6,3.6,TRUE,10,CAR,36,36
+59,2KG/BAG x 5 BAGS/BOX x 12 BOX/CAR,KG,1,BAG,2,2,BOX,5,10,10,TRUE,12,CAR,120,120
+60,1.2KG/BAG x 8 BAGS/BOX x 6 BOX/CAR,KG,1,BAG,1.2,1.2,BOX,8,9.6,9.6,TRUE,6,CAR,57.6,57.6
+61,0.6KG/BAG x 15 BAGS/BOX x 4 BOX/CAR,KG,1,BAG,0.6,0.6,BOX,15,9,9,TRUE,4,CAR,36,36
+62,3 kgs per bag x 10 bags per carton,KG,,,,,BAG,1,3,3,TRUE,10,CAR,30,30
+63,1.5 kgs per bag x 8 bags per carton,KG,,,,,BAG,1,1.5,1.5,TRUE,8,CAR,12,12
+64,2kgs per bag and 12 bags per carton,KG,,,,,BAG,1,2,2,TRUE,12,CAR,24,24
+65,80g per sachet 4 sticks 20 sachets per box,KG,1,STK,0.02,0.02,SAC,4,0.08,0.08,TRUE,20,BOX,1.6,1.6
+66,100g per sachet 5 sticks 15 sachets per box,KG,1,STK,0.02,0.02,SAC,5,0.1,0.1,TRUE,15,BOX,1.5,1.5
+67,1kg per tray 10 trays per case,KG,,,,,TRA,1,1,1,TRUE,10,CS,10,10
+68,10 ชิ้น/ถุง 6 ถุงต่อกล่อง,KG,1,PC,,,BAG,10,,,TRUE,6,CS,0,0
+69,12 ชิ้น/ถุง 8 ถุงต่อกล่อง,KG,1,PC,,,BAG,12,,,TRUE,8,CS,0,0
+70,15 ชิ้น/ถุง 10 ถุงต่อกล่อง,KG,1,PC,,,BAG,15,,,TRUE,10,CS,0,0
+71,8 ชิ้น/ถุง 5 ถุงต่อกล่อง,KG,1,PC,,,BAG,8,,,TRUE,5,CS,0,0
+72,2KG/BAG,KG,,,,,BAG,1,2,2,FALSE,,,,
+73,3KG/BAG,KG,,,,,BAG,1,3,3,FALSE,,,,
+74,1.5KG/BAG,KG,,,,,BAG,1,1.5,1.5,FALSE,,,,
+75,5KG/BAG,KG,,,,,BAG,1,5,5,FALSE,,,,
+76,1 ตัว/ถุง,KG,1,EA,,,BAG,1,,,FALSE,,,,
+77,2 ตัว/ถุง,KG,1,EA,,,BAG,2,,,FALSE,,,,
+78,1 ตัว/กล่อง,KG,1,EA,,,CS,1,,,FALSE,,,,
+79,3 ตัว/ถุง,KG,1,EA,,,BAG,3,,,FALSE,,,,
+80,10 pieces per bag,KG,10,PC,,,BAG,10,,,FALSE,,,,
+81,1 whole per bag,KG,1,EA,,,BAG,1,,,FALSE,,,,
+82,500g x 20,KG,,,0.5,0.5,,20,10,10,FALSE,,,,
+83,ถุงละ 10 ชิ้น,KG,10,PC,,,BAG,10,,,FALSE,,,,
+84,กล่องละ 12 ซอง,KG,,,,,SAC,1,,,TRUE,12,CS,0,0
+85,100g each 15 per box,KG,,,,,EA,1,0.1,0.1,TRUE,15,BOX,1.5,1.5
+86,2kg net weight bag,KG,,,,,BAG,1,2,2,FALSE,,,,
+87,pack of 10 sachets 100g,KG,,,,,,,,,,,,,
+88,inner: 10pcs outer: 6,KG,,,,,PC,10,,,TRUE,6,,0,0
+89,175 -180KG บรรจุถุงขนาดใหญ่ ขายชั่งน้ำหนักจริง,KG,1,EA,175,180,BAG,1,175,180,FALSE,,,,
+90,990G(33STICK)X1BAGX12INN CARTON,KG,1,STK,0.03,0.03,BAG,33,0.99,0.99,TRUE,12,CAR,11.88,11.88
+91,80G(+15G SAUCE)/BAG,KG,,,,,BAG,1,0.08,0.08,FALSE,,,,
+92,75G (+5G SPRINKLE SACHETS)/BAG,KG,,,,,BAG,1,0.075,0.075,FALSE,,,,
+93,3 kgs/tank,KG,,,,,TNK,1,3,3,FALSE,,,,
+98,5-6kg/ถัง,KG,,,,,TNK,1,5,6,TRUE,,,,

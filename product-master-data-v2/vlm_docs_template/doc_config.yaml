@@ -1,0 +1,71 @@
+template:
+  doc_type5: #poultry 
+    doc_info_business_unit: chicken
+    page_width: 2858
+    page_height: 4169
+
+    field_mapping:
+      product_name: [product_desc, product_name]
+      customer: [product_desc, customer]
+      spec_no: [product_desc, spec_no]
+      country: [product_desc,country]
+      packing_detail: [product_desc,packing_detail]
+      inner_net_weight: [product_desc, inner_net_weight]
+      channel: [product_desc, channel]
+      business_unit: [product_desc, business_unit]
+      process: [process, process]
+      temp: [process, temp]
+      product_type: [process, product_type]
+      plant_detail: [plant_info, plant_detail]
+      part: [meat_used, animal_part]
+
+    regions:
+      
+      product_desc: 
+        bbox: [70, 251, 2839, 1030]
+        prompt: | 
+          Extract the following information:
+            1. Product Name: <string>
+            2. Spec/Sample No: <string>
+            3. Customer Name: <string>
+            4. Country:  <string>
+            5. Packing Detail: <string>
+            6. Net weight in KG: <if in other unit, do the conversion to kg>
+            7. Channel: <if have multiple channel compile a list>
+            8. Business unit: "chicken"
+
+        fields: [product_name, spec_no, customer, country, packing_detail, inner_net_weight, channel, business_unit]
+
+      packaging: 
+        bbox: [55, 251, 2844, 1025]
+        prompt: | 
+          Extract the packaging detail text
+        fields: [packing_detail]
+     
+      process: 
+        bbox: [44, 1046, 2828, 2515]
+        prompt: | 
+          Extract the following fields:
+            1. Process: <if see long flow, just list all process workflow into 1 long text (e.g. "fry -> roast -> freeze")>
+            1. Temp: <chill/frozen/ambient>
+        fields: [process, temp]
+
+      plant_info: 
+        bbox: [1099, 314, 1619, 394]
+        prompt: | 
+          Extract the following fields:
+            1. โรงงาน/plant: <usually expressed in thai province in thai language, if None just state "เเปรรูปไก่มีนบุรี">
+        fields: [plant_detail]
+
+      meat_used: 
+        bbox: [39, 1608 ,2839, 1969]
+        prompt: | 
+          Extract the following fields:
+            1. Raw Meat ที่ใช้: <expressed in code>
+        fields: [animal_part]
+
+
+       
+
+      
+    
