@@ -19,6 +19,6 @@ This POC demonstrates that AI can automate the most labor-intensive parts of pro
 
 **1) Case analysis + Solution Architecture Presentation Slides:**[Link to slide presentation](MDM_case_present.pdf)**
 
-**2) POC Screenshot**[Link to slide presentation](TBD)**
+**2) POC Screenshot (TBD)**[Link to slide presentation](TBD)**
 
-**3) Metadata Governance Implementation**[Link to slide presentation](TBD)**
+**3) Metadata Governance Implementation (TBD)**[Link to slide presentation](TBD)**
